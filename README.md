@@ -107,33 +107,32 @@ from it leaves no residue behind.
 ## File structure
 
 ```text
-mornrain-grid/
-|-- .github/
-|   `-- workflows/
-|       `-- build.yml
-|-- assets/
-|   |-- css/
-|   |   `-- main.css
-|   `-- js/
-|       `-- main.js
-|-- tests/
-|   |-- ScaffoldTest.php
-|   `-- bootstrap.php
-|-- 404.php
-|-- archive.php
-|-- composer.json
-|-- footer.php
-|-- functions.php
-|-- header.php
-|-- index.php
-|-- LICENSE
-|-- page.php
-|-- phpunit.xml.dist
-|-- README.md
-|-- search.php
-|-- single.php
-`-- style.css
-
+mornrain-grid/             # MornRain Grid 主题根目录：杂志式多栏排版
+|-- .github/               # GitHub 仓库配置目录
+|   `-- workflows/         # GitHub Actions 工作流目录
+|       `-- build.yml      # CI 工作流：在 PHP 8.1–8.3 上 lint、跑 PHPUnit 并打包 ZIP 构件
+|-- assets/                # 前端静态资源目录
+|   |-- css/               # 样式资源目录
+|   |   `-- main.css       # 主样式：设计令牌、原生 CSS 多列瀑布流归档与响应式列数
+|   `-- js/                # 脚本资源目录
+|       `-- main.js        # 渐进增强脚本：移动端菜单开合与宽表格横向滚动
+|-- tests/                 # PHPUnit 测试目录
+|   |-- ScaffoldTest.php   # 脚手架冒烟测试：断言 README、LICENSE、composer.json 与入口文件存在
+|   `-- bootstrap.php      # PHPUnit 引导文件：存在时才加载 Composer 自动加载器
+|-- 404.php                # 404 模板：未找到提示与站内搜索表单
+|-- archive.php            # 归档模板：分类/标签/日期归档的多栏卡片列表
+|-- composer.json          # Composer 元数据与 lint/test 脚本
+|-- footer.php             # 页脚模板：页脚菜单与版权信息
+|-- functions.php          # 主题初始化：导航菜单、缩略图、feature(1280x720)/card(640x420) 两种图尺寸与资源挂载
+|-- header.php             # 头部模板：head 元信息、站点品牌区与主导航
+|-- index.php              # 首页模板：多栏杂志卡片循环
+|-- LICENSE                # GPL-2.0-or-later 许可证全文
+|-- page.php               # 独立页面模板：页面标题与正文
+|-- phpunit.xml.dist       # PHPUnit 配置，扫描 tests 目录
+|-- README.md              # 主题说明文档
+|-- search.php             # 搜索结果模板：关键词标题与结果卡片列表
+|-- single.php             # 单篇文章模板：标题、元信息、特色图与正文
+`-- style.css              # 主题头信息与基础样式，先于 main.css 加载
 ```
 
 ---
@@ -211,4 +210,3 @@ PARTICULAR PURPOSE. See the GNU General Public License for more details.
 ```
 
 See [LICENSE](LICENSE) for the full text.
-*（内容由AI生成，仅供参考）*
