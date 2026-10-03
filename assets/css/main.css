@@ -1,0 +1,486 @@
+/*! MornRain Grid - assets/css/main.css
+ *  Loaded after style.css. Zero external dependencies.
+ */
+
+/* 1. Design tokens */
+:root {
+	--mg-bg: #ffffff;
+	--mg-ink: #111111;
+	--mg-ink-soft: #555555;
+	--mg-muted: #8a8a8a;
+	--mg-accent: #d02b2b;
+	--mg-rule: #111111;
+	--mg-line: #e6e6e6;
+	--mg-shell: 1200px;
+}
+
+/* 2. Reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--mg-bg);
+	color: var(--mg-ink);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-size: 17px;
+	line-height: 1.65;
+}
+
+/* 3. Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 1.8em 0 0.6em;
+	font-weight: 800;
+	line-height: 1.2;
+	letter-spacing: -0.01em;
+}
+
+p { margin: 0 0 1.3em; }
+
+blockquote {
+	margin: 1.8em 0;
+	padding: 0.4em 0 0.4em 1.4em;
+	border-left: 4px solid var(--mg-accent);
+	font-size: 1.1rem;
+	font-style: italic;
+}
+
+code,
+kbd,
+pre {
+	font-family: "SFMono-Regular", Menlo, Consolas, "Courier New", monospace;
+	font-size: 0.88em;
+}
+
+pre {
+	padding: 1.2em 1.3em;
+	overflow-x: auto;
+	background-color: #f7f7f7;
+	border-left: 4px solid var(--mg-rule);
+}
+
+a {
+	color: var(--mg-ink);
+	text-decoration: none;
+	border-bottom: 1px solid var(--mg-line);
+}
+
+a:hover,
+a:focus {
+	color: var(--mg-accent);
+	border-bottom-color: var(--mg-accent);
+}
+
+img,
+svg,
+video,
+iframe {
+	max-width: 100%;
+	height: auto;
+}
+
+/* 4. Shell */
+.site {
+	max-width: var(--mg-shell);
+	margin: 0 auto;
+	padding: 0 1.5rem 4rem;
+}
+
+/* 5. Masthead */
+.site-header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 1.5rem;
+	padding: 2.5rem 0 1.2rem;
+	border-bottom: 4px solid var(--mg-rule);
+}
+
+.site-title {
+	margin: 0;
+	font-size: 2.1rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: -0.02em;
+	line-height: 1;
+}
+
+.site-title a {
+	color: var(--mg-ink);
+	border-bottom: 0;
+}
+
+.site-description {
+	margin: 0.5rem 0 0;
+	color: var(--mg-muted);
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	letter-spacing: 0.16em;
+}
+
+/* 6. Navigation */
+.main-navigation ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.6rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.main-navigation a {
+	font-size: 0.82rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+	border-bottom: 0;
+}
+
+.main-navigation a:hover,
+.main-navigation .current-menu-item > a {
+	color: var(--mg-accent);
+}
+
+.main-navigation ul ul {
+	position: absolute;
+	z-index: 20;
+	display: none;
+	min-width: 12rem;
+	padding: 0.6rem 0.9rem;
+	background-color: #ffffff;
+	border: 1px solid var(--mg-line);
+	list-style: none;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation li:hover > ul,
+.main-navigation li:focus-within > ul {
+	display: block;
+}
+
+.menu-toggle {
+	display: none;
+	padding: 0.5em 1.1em;
+	background: none;
+	border: 2px solid var(--mg-rule);
+	color: var(--mg-ink);
+	font: inherit;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	cursor: pointer;
+}
+
+/* 7. Masonry list */
+.site-main {
+	padding-top: 2.5rem;
+}
+
+.post-list {
+	column-count: 3;
+	column-gap: 2.2rem;
+}
+
+.post-list > .post-card {
+	display: inline-block;
+	width: 100%;
+	margin: 0 0 2.2rem;
+	break-inside: avoid;
+	page-break-inside: avoid;
+	vertical-align: top;
+}
+
+.post-card .post-thumbnail {
+	display: block;
+	margin: 0 0 0.9rem;
+	overflow: hidden;
+}
+
+.post-card .post-thumbnail img {
+	display: block;
+	width: 100%;
+}
+
+.entry-title {
+	margin: 0 0 0.4rem;
+	font-size: 1.15rem;
+}
+
+.entry-title a {
+	color: var(--mg-ink);
+	border-bottom: 0;
+}
+
+.entry-title a:hover {
+	color: var(--mg-accent);
+}
+
+.entry-meta {
+	margin-bottom: 0.7rem;
+	color: var(--mg-muted);
+	font-size: 0.72rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+}
+
+.entry-meta > * + *::before {
+	content: " / ";
+}
+
+.entry-summary {
+	color: var(--mg-ink-soft);
+	font-size: 0.94rem;
+}
+
+.read-more {
+	display: inline-block;
+	margin-top: 0.3rem;
+	font-size: 0.72rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.16em;
+	border-bottom: 0;
+}
+
+.read-more::after {
+	content: " >>";
+}
+
+/* 8. Single entry */
+.entry {
+	max-width: 46rem;
+	margin: 0 auto;
+}
+
+.entry .post-thumbnail {
+	margin: 0 0 2rem;
+}
+
+.entry-title {
+	font-size: 2.3rem;
+}
+
+.entry-content h2 {
+	padding-bottom: 0.3em;
+	border-bottom: 2px solid var(--mg-line);
+}
+
+.entry-footer {
+	margin-top: 2.5rem;
+	padding-top: 1.2rem;
+	border-top: 1px solid var(--mg-line);
+	color: var(--mg-muted);
+	font-size: 0.85rem;
+}
+
+/* 9. Section headers */
+.page-header {
+	margin-bottom: 2rem;
+	padding-bottom: 0.8rem;
+	border-bottom: 4px solid var(--mg-rule);
+}
+
+.page-title {
+	margin: 0;
+	font-size: 1.9rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: -0.01em;
+}
+
+.archive-description {
+	margin-top: 0.7rem;
+	color: var(--mg-ink-soft);
+}
+
+.pagination,
+.navigation.posts-navigation {
+	clear: both;
+	margin-top: 3rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid var(--mg-line);
+	text-align: center;
+	font-size: 0.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+}
+
+.pagination .page-numbers {
+	padding: 0 0.7rem;
+}
+
+.pagination .current {
+	color: var(--mg-accent);
+}
+
+/* 10. Footer */
+.site-footer {
+	margin-top: 4rem;
+	padding-top: 1.8rem;
+	border-top: 4px solid var(--mg-rule);
+	color: var(--mg-muted);
+	font-size: 0.78rem;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+}
+
+.site-footer ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.6rem;
+	margin: 0 0 1rem;
+	padding: 0;
+	list-style: none;
+}
+
+/* 11. Forms */
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+textarea {
+	width: 100%;
+	padding: 0.8em 0.9em;
+	background-color: #ffffff;
+	border: 2px solid var(--mg-rule);
+	color: var(--mg-ink);
+	font: inherit;
+}
+
+button,
+input[type="submit"] {
+	padding: 0.8em 1.6em;
+	background-color: var(--mg-accent);
+	border: 0;
+	color: #ffffff;
+	font: inherit;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+	cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+	background-color: var(--mg-ink);
+}
+
+/* 12. Comments */
+.comment-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.comment-body {
+	padding: 1.2rem 0;
+	border-bottom: 1px solid var(--mg-line);
+}
+
+.comment-list .children {
+	margin-left: 1.5rem;
+	list-style: none;
+}
+
+/* 13. Accessibility */
+.screen-reader-text {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	border: 0;
+	white-space: nowrap;
+}
+
+.screen-reader-text:focus,
+.skip-link:focus {
+	position: fixed;
+	top: 0.5rem;
+	left: 0.5rem;
+	z-index: 999;
+	width: auto;
+	height: auto;
+	padding: 0.6em 1.1em;
+	clip: auto;
+	clip-path: none;
+	background-color: var(--mg-accent);
+	color: #ffffff;
+}
+
+/* 14. Responsive */
+@media (max-width: 1000px) {
+	.post-list {
+		column-count: 2;
+	}
+}
+
+@media (max-width: 640px) {
+	.site {
+		padding: 0 1rem 3rem;
+	}
+
+	.post-list {
+		column-count: 1;
+	}
+
+	.entry-title {
+		font-size: 1.8rem;
+	}
+
+	.main-navigation .menu-toggle {
+		display: inline-block;
+	}
+
+	.main-navigation .primary-menu {
+		display: none;
+	}
+
+	.main-navigation.is-open .primary-menu {
+		display: flex;
+		flex-direction: column;
+		gap: 0.8rem;
+		margin-top: 1rem;
+	}
+}
+
+/* 15. Print */
+@media print {
+	.site-header,
+	.site-footer,
+	.menu-toggle,
+	.pagination {
+		display: none;
+	}
+
+	.post-list {
+		column-count: 1;
+	}
+
+	a::after {
+		content: " (" attr(href) ")";
+		font-size: 0.8em;
+	}
+}

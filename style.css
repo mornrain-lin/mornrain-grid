@@ -1,0 +1,60 @@
+/*
+Theme Name: MornRain Grid
+Theme URI: https://github.com/mornrain-lin/mornrain-grid
+Author: mornrain-lin
+Author URI: https://github.com/mornrain-lin
+Description: A magazine-style multi-column theme with a masonry archive built on native CSS columns.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.6
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mornrain-grid
+Tags: blog, three-columns, custom-logo, custom-menu, featured-images, translation-ready, block-styles
+
+MornRain Grid is free software: you can redistribute it and/or modify it under the
+terms of the GNU General Public License as published by the Free Software
+Foundation, either version 2 of the License, or (at your option) any later
+version.
+
+MornRain Grid is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+All layout and component styles live in assets/css/main.css. This file carries
+the required theme header plus a few base rules that must be available before
+main.css is loaded.
+*/
+
+/* 1. Base ---------------------------------------------------------------- */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	word-wrap: break-word;
+}
+
+/* 2. Theme signature ----------------------------------------------------- */
+:root {
+	--mg-accent: #d02b2b;
+	--mg-rule: #111111;
+}
+
+body {
+	background-color: #ffffff;
+	color: #111111;
+}
+
+.entry-title {
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: -0.01em;
+}
+
+.page-title {
+	border-bottom: 3px solid var(--mg-rule);
+}
