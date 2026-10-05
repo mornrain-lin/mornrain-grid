@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: cf93d2ba4252e3fc820ac383cb09c649_795e8692be7a11f18019525400248c00
-    ReservedCode1: tdsvRz5Nft5kSy0SnXjQXRleunjYVYLo1h+Hz2okbjaWy6ClZCPVFkm6L027W2V1x+UY+YVbzKfSx85KfGGIGef/0AQnxJn9lP83QT1158PZWb7PUxtmm66FQlCcbV0O5AG1gKVS4gijVfIhO7c9UcPXVlSI+W1uY8wxfyY4eBL7a828xzW/LL1p+k8=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: cf93d2ba4252e3fc820ac383cb09c649_795e8692be7a11f18019525400248c00
-    ReservedCode2: tdsvRz5Nft5kSy0SnXjQXRleunjYVYLo1h+Hz2okbjaWy6ClZCPVFkm6L027W2V1x+UY+YVbzKfSx85KfGGIGef/0AQnxJn9lP83QT1158PZWb7PUxtmm66FQlCcbV0O5AG1gKVS4gijVfIhO7c9UcPXVlSI+W1uY8wxfyY4eBL7a828xzW/LL1p+k8=
----
-
 # MornRain Grid
 
 > A magazine-style grid theme for dense, visual publishing.
