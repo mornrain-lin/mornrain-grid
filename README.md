@@ -1,3 +1,5 @@
+![mornrain-grid](assets/preview.png)
+
 # MornRain Grid
 
 > A magazine-style grid theme for dense, visual publishing.
